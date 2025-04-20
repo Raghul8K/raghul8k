@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+    <style>
+        /* Fancy Background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fceabb, #f8b500);
+            color: #333;
+            margin: 0;
+            padding-bottom: 70px; /* space for footer */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #ffffffdd;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #222;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Upload Section Styling */
+        #certificate-upload {
+            margin-top: 10px;
+            padding: 12px;
+            font-size: 1rem;
+            border: 2px solid #888;
+            border-radius: 8px;
+            background-color: #fff0e1;
+            transition: border 0.3s ease-in-out;
+        }
+
+        #certificate-upload:hover {
+            border-color: #ff4b2b;
+        }
+
+        p {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Certification List */
+        .certification-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 25px;
+        }
+
+        .certification-list li {
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            margin: 12px 0;
+            padding: 18px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .certification-list li:hover {
+            transform: scale(1.02);
+        }
+
+        .colorful-text {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Button Styling */
+        button {
+            background: linear-gradient(to right, #00c9ff, #92fe9d);
+            color: #fff;
+            padding: 14px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #43e97b, #38f9d7);
+        }
+        .certificate-section {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 40px 20px;
+    }
+
+    .certificate-title {
+      text-align: center;
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .certificate-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .certificate-item {
+      width: 200px;
+      height: 280px;
+      background-color: #e3f2fd;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .certificate-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .certificate-item:hover {
+      transform: scale(1.05);
+    }
+
+    .certificate-item p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Footer Styles */
+    .container p {
+      margin: 0;
+      font-size: 14px;
+    }
+    footer {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+        }
+
+        footer p {
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Certifications & Courses</h2>
+        <form id="certification-form">
+            <p>📁 Upload Certificates:</p>
+            <input type="file" id="certificate-upload" accept=".pdf, .jpg, .jpeg, .png" multiple>
+            <ul class="certification-list">
+                <li>👨‍🎓 <strong class="colorful-text">Certificate in Full Stack Development</strong> – Coursera</li>
+                <li>🖥️ <strong class="colorful-text">Java Programming and Software Engineering Fundamentals</strong> – edX</li>
+                <li>📊 <strong class="colorful-text">Data Science Professional Certificate</strong> – IBM</li>
+                <li>🔐 <strong class="colorful-text">Cybersecurity Fundamentals</strong> – Cisco Networking Academy</li>
+                <li>🌐 <strong class="colorful-text">Web Development Bootcamp</strong> – Udemy</li>
+                <li>📜 <strong class="colorful-text">Machine Learning Specialization</strong> – Coursera</li>
+                <li>📈 <strong class="colorful-text">Data Analysis with Python</strong> – DataCamp</li>
+                <li>📱 <strong class="colorful-text">Mobile App Development</strong> – Udacity</li>
+                <li>🛡️ <strong class="colorful-text">Ethical Hacking Certification</strong> – Cybrary</li>
+                <li>🏅 <strong class="colorful-text">Project Management Professional (PMP)</strong> – PMI</li>
+            </ul>
+        </form>
+    </div>
+    <section class="certificate-section">
+        <div class="certificate-title">
+          <h2>My Certifications</h2>
+        </div>
+    
+        <div class="certificate-gallery">
+          <!-- Example Certificate 1 -->
+          <div class="certificate-item">
+            <img src="gen ai.jpg" alt="Certificate 1">
+            <p>Certificate of Gen AI</p>
+          </div>
+    
+          <!-- Example Certificate 2 -->
+          <div class="certificate-item">
+            <img src="full.jpg" alt="Certificate 2">
+            <p>Certificate of full stack</p>
+          </div>
+    
+          <!-- Example Certificate 3 -->
+          <div class="certificate-item">
+            <img src="paper certi.jpg" alt="Certificate 3">
+            <p>Certificate paper presendation</p>
+          </div>
+    
+          <!-- Add more certificates as needed -->
+        </div>
+      </section>
+    
+    <button onclick="goBack()">🏠 Back to Home</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    
+ <footer>
+  <p>&copy; 2025 Raghul's Cartificate & CoursePortfolio. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Raghul's Colorful Portfolio</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('pic1.jpg'); /* Ensure pic1.jpg is in the same folder */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #ffffff;
+      margin: 0;
+      padding-bottom: 70px; /* space for footer */
+      font-family: Arial, sans-serif;
+    }
+
+    .overlay {
+      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding-bottom: 120px;
+    }
+
+    h1 {
+      color: #ffeb3b;
+      text-align: center;
+      font-size: 50px;
+      padding: 40px 0 20px;
+      text-shadow: 4px 4px 8px #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      background: linear-gradient(135deg, #ff4081, #7c4dff);
+      color: white;
+      border: none;
+      padding: 14px 26px;
+      font-size: 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #ff80ab, #9575cd);
+    }
+
+    /* Contact Section */
+    .contact-wrapper {
+      max-width: 750px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      color: #fff;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .contact-header h2 {
+      font-size: 32px;
+      background: linear-gradient(to right, #00e5ff, #ff4081);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-header p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      background-color: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #eee;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid #00e5ff;
+      background-color: rgba(255,255,255,0.3);
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background: linear-gradient(to right, #00e5ff, #7c4dff);
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(to right, #18ffff, #b388ff);
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .social-links h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #ffeb3b;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      padding: 8px 16px;
+      background-color: #00bcd4;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background-color: #0097a7;
+    }
+    
+
+        footer {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+        }
+
+        footer p {
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .contact-wrapper {
+        margin: 20px;
+        padding: 25px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <section>
+      <h1>Hello, I'm Raghul</h1>
+    </section>
+
+    <section>
+      <nav>
+        <button onclick="redirectTo('about.html')">About Me</button>
+        <button onclick="redirectTo('profile.html')">Profile</button>
+        <button onclick="redirectTo('education.html')">Education</button>
+        <button onclick="redirectTo('Academic.html')">Academic</button>
+        <button onclick="redirectTo('skills.html')">Skills</button>
+        <button onclick="redirectTo('resume.html')">Resume</button>
+        <button onclick="redirectTo('personal.html')">Personal Info</button>
+        <button onclick="redirectTo('certification.html')">Certificates</button>
+      </nav>
+    </section>
+
+    <section class="contact-wrapper" id="contact">
+      <div class="contact-header">
+        <h2>Let’s Connect</h2>
+        <p>Have questions or ideas? Let’s talk!</p>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="email" placeholder="Your Email Address" required>
+        <textarea placeholder="Write your message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social-links">
+        <h3>Follow Me</h3>
+        <a href="https://www.instagram.com/raghul8k" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/share/1BPpmeoJrh/" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/in/raghul-k-076213310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin</a>
+        <a href="https://www.threads.net/@raghul8k" target="_blank">threads</a>
+        <a href="https://www.duolingo.com/profile/K.Raghul1?via=share_profile_link" target="_blank">duolingo</a>
+        <a href="https://www.snapchat.com/add/kraghul2920?share_id=Ny4v9RgWZtg&locale=en-US" target="_blank">snapchat</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Raghul's Colorful Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

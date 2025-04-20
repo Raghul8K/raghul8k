@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Colorful Profile</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f, #ff9a9e);
+      color: #333;
+      animation: bg-move 10s infinite alternate linear;
+      margin: 0;
+     padding-bottom: 70px; /* space for footer */
+      font-family: Arial, sans-serif;
+    }
+
+    @keyframes bg-move {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: linear-gradient(to bottom right, #ffffff, #f9f3ff);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      color: #e91e63;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ff4081;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    .profile-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .profile-info p {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    .profile-info strong {
+      color: #9c27b0;
+    }
+
+    .profile-info a {
+      color: #2196f3;
+      text-decoration: none;
+    }
+
+    .profile-info a:hover {
+      text-decoration: underline;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ff5722;
+    }
+
+    input[type="file"] {
+      margin-top: 8px;
+      padding: 6px;
+      border: 2px dashed #9c27b0;
+      border-radius: 10px;
+      background-color: #fff3e0;
+      transition: 0.3s;
+    }
+
+    input[type="file"]:hover {
+      background-color: #ffe0b2;
+    }
+
+    button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 12px 30px;
+      background: linear-gradient(to right, #f50057, #ff4081);
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #c51162, #f50057);
+    }
+    footer {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+        }
+
+        footer p {
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+
+
+
+
+    @media screen and (max-width: 600px) {
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-photo {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2> Profile 🌟</h2>
+    <div class="profile-container">
+      <img id="profile-photo-preview" src="pic2.jpg" alt="Profile Photo" class="profile-photo" />
+      <div class="profile-info">
+        <p><strong>Name:</strong> Raghul</p>
+        <p><strong>College:</strong> AAA College of Engineering and Technology</p>
+        <p><strong>Department:</strong> Information Technology</p>
+        <p><strong>Year:</strong> 2nd Year</p>
+        <p><strong>Age:</strong> 18</p>
+        <p><strong>Native Place:</strong> Rajapalayam</p>
+        <p><strong>Date of Birth:</strong> 28-08-2006</p>
+        <p><strong>Email:</strong> <a href="mailto:23urit037@aaacet.ac.in">23urit037@aaacet.ac.in</a></p>
+
+        <label for="profile-photo">Upload New Photo:</label>
+        <input type="file" id="profile-photo" accept="image/*" required>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="goBack()">🏠 Back to Home</button>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    const input = document.getElementById('profile-photo');
+    const preview = document.getElementById('profile-photo-preview');
+
+    input.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+  
+ <footer>
+  <p>&copy; 2025 Raghul's profile Portfolio. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
